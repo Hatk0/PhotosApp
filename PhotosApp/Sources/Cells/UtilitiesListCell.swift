@@ -67,6 +67,8 @@ class UtilitiesListCell: UICollectionViewListCell {
         }
     }
     
+    // MARK: - Configuration
+    
     func configuration(model: AlbumsModel) {
         settingImageView.image = UIImage(systemName: model.image)
         titlelabel.text = model.title
