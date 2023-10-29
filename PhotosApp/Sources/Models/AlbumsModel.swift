@@ -26,6 +26,17 @@ extension AlbumsModel {
         AlbumsModel(title: "Comics", description: "Created by Peter", image: "comics", quantity: ""),
         AlbumsModel(title: "Subway", description: "Created by James", image: "subway", quantity: ""),
         AlbumsModel(title: "Sunrise", description: "Created by Leo", image: "sunrise", quantity: "")
+        ],
+        
+        // Media Types
+        
+        [AlbumsModel(title: "Videos", description: "", image: "video", quantity: "76"),
+         AlbumsModel(title: "Selfies", description: "", image: "person.crop.square", quantity: "464"),
+         AlbumsModel(title: "Portrait", description: "", image: "cube", quantity: "6"),
+         AlbumsModel(title: "Panoramas", description: "", image: "pano", quantity: "2"),
+         AlbumsModel(title: "Bursts", description: "", image: "square.3.layers.3d.down.forward", quantity: "5"),
+         AlbumsModel(title: "Screeenshots", description: "", image: "camera.viewfinder", quantity: "1113"),
+         AlbumsModel(title: "Screen Recordings", description: "", image: "smallcircle.filled.circle", quantity: "4")
         ]
     ]
 }
