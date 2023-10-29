@@ -9,6 +9,7 @@ class AlbumsViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.register(MyAlbumsCell.self, forCellWithReuseIdentifier: MyAlbumsCell.identifier)
         collectionView.register(SharedAlbumsCell.self, forCellWithReuseIdentifier: SharedAlbumsCell.identifier)
+        collectionView.register(MediaTypesListCell.self, forCellWithReuseIdentifier: MediaTypesListCell.identifier)
         collectionView.register(CellHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellHeader.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -106,6 +107,39 @@ class AlbumsViewController: UIViewController {
                                                                 trailing: 0)
                 
                 return layoutSection
+            case 2:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                      heightDimension: .fractionalHeight(1))
+                let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 2,
+                                                                   leading: 2,
+                                                                   bottom: 2,
+                                                                   trailing: 2)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                       heightDimension: .fractionalHeight(0.1))
+                
+                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize,subitems: [layoutItem])
+                layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 5,
+                                                                    leading: 0,
+                                                                    bottom: 0,
+                                                                    trailing: 0)
+                
+                let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+                layoutSection.orthogonalScrollingBehavior = .none
+                
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.93),
+                    heightDimension: .estimated(30)
+                )
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+                
+                return layoutSection
             default:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
@@ -146,6 +180,10 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellHeader.identifier, for: indexPath) as! CellHeader
             header.title.text = "Shared Albums"
             return header
+        case 2:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellHeader.identifier, for: indexPath) as! CellHeader
+            header.title.text = "Media Types"
+            return header
         default:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
             return header
@@ -161,6 +199,11 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SharedAlbumsCell.identifier, for: indexPath) as! SharedAlbumsCell
             cell.configuration(model: AlbumsModel.modelArray[indexPath.section][indexPath.item])
+            return cell
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaTypesListCell.identifier, for: indexPath) as! MediaTypesListCell
+            cell.configuration(model: AlbumsModel.modelArray[indexPath.section][indexPath.item])
+            cell.accessories = [.disclosureIndicator()]
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
