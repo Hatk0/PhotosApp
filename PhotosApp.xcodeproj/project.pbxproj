@@ -19,6 +19,7 @@
 		6C43D8C02AEE6DEF00B0A0CF /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D8BF2AEE6DEF00B0A0CF /* CellHeader.swift */; };
 		6C43D8C22AEE6F5E00B0A0CF /* SharedAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D8C12AEE6F5E00B0A0CF /* SharedAlbumsCell.swift */; };
 		6C43D8C42AEE712A00B0A0CF /* MediaTypesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D8C32AEE712A00B0A0CF /* MediaTypesListCell.swift */; };
+		6C43D8C62AEE73C000B0A0CF /* UtilitiesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D8C52AEE73C000B0A0CF /* UtilitiesListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6C43D8BF2AEE6DEF00B0A0CF /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
 		6C43D8C12AEE6F5E00B0A0CF /* SharedAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAlbumsCell.swift; sourceTree = "<group>"; };
 		6C43D8C32AEE712A00B0A0CF /* MediaTypesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesListCell.swift; sourceTree = "<group>"; };
+		6C43D8C52AEE73C000B0A0CF /* UtilitiesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				6C43D8BB2AEE6C0000B0A0CF /* MyAlbumsCell.swift */,
 				6C43D8C12AEE6F5E00B0A0CF /* SharedAlbumsCell.swift */,
 				6C43D8C32AEE712A00B0A0CF /* MediaTypesListCell.swift */,
+				6C43D8C52AEE73C000B0A0CF /* UtilitiesListCell.swift */,
 				6C43D8BF2AEE6DEF00B0A0CF /* CellHeader.swift */,
 			);
 			path = Cells;
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C43D8C02AEE6DEF00B0A0CF /* CellHeader.swift in Sources */,
+				6C43D8C62AEE73C000B0A0CF /* UtilitiesListCell.swift in Sources */,
 				6C43D8BE2AEE6C1D00B0A0CF /* AlbumsModel.swift in Sources */,
 				6C43D8C42AEE712A00B0A0CF /* MediaTypesListCell.swift in Sources */,
 				6C43D8A12AEE69AA00B0A0CF /* AlbumsViewController.swift in Sources */,
