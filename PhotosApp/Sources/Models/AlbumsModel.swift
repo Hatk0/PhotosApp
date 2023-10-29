@@ -37,6 +37,14 @@ extension AlbumsModel {
          AlbumsModel(title: "Bursts", description: "", image: "square.3.layers.3d.down.forward", quantity: "5"),
          AlbumsModel(title: "Screeenshots", description: "", image: "camera.viewfinder", quantity: "1113"),
          AlbumsModel(title: "Screen Recordings", description: "", image: "smallcircle.filled.circle", quantity: "4")
+        ],
+        
+        // Utilities
+        
+        [AlbumsModel(title: "Imports", description: "", image: "square.and.arrow.down", quantity: "10"),
+         AlbumsModel(title: "Duplicates", description: "", image: "square.on.square", quantity: "25"),
+         AlbumsModel(title: "Hidden", description: "", image: "eye.slash", quantity: "5"),
+         AlbumsModel(title: "Recently Deleted", description: "", image: "trash", quantity: "0")
         ]
     ]
 }

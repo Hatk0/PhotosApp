@@ -117,8 +117,8 @@
 			children = (
 				6C43D8BB2AEE6C0000B0A0CF /* MyAlbumsCell.swift */,
 				6C43D8C12AEE6F5E00B0A0CF /* SharedAlbumsCell.swift */,
-				6C43D8BF2AEE6DEF00B0A0CF /* CellHeader.swift */,
 				6C43D8C32AEE712A00B0A0CF /* MediaTypesListCell.swift */,
+				6C43D8BF2AEE6DEF00B0A0CF /* CellHeader.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
